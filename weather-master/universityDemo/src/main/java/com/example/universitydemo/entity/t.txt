@@ -1,0 +1,21 @@
+public List<Student> findStudentsByCourseId(Long cId) {
+  // Use the JpaRepository to find the course with the given cId
+  Optional<Course> courseOptional = courseRepository.findById(cId);
+  if (!courseOptional.isPresent()) {
+    // Return an empty list if the course was not found
+    return Collections.emptyList();
+  }
+  Course course = courseOptional.get();
+
+  // Use the JpaRepository to find all relations that have the found course
+  List<Relation> relations = relationRepository.findAllByCourse(course);
+
+  // Extract the students from the found relations and return them in a list
+  return relations.stream()
+    .map(Relation::getStudent)
+    .collect(Collectors.toList());
+}
+
+public interface RelationRepository extends JpaRepository<Relation, Long> {
+  List<Relation> findAllByCourse(Course course);
+}
