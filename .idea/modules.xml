@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/weather-master/common/common.iml" filepath="$PROJECT_DIR$/weather-master/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/details/details.iml" filepath="$PROJECT_DIR$/weather-master/details/details.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/discovery/discovery.iml" filepath="$PROJECT_DIR$/weather-master/discovery/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/employee/employee.iml" filepath="$PROJECT_DIR$/weather-master/employee/employee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/gateway/gateway.iml" filepath="$PROJECT_DIR$/weather-master/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/search/search.iml" filepath="$PROJECT_DIR$/weather-master/search/search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/universityDemo/universityDemo.iml" filepath="$PROJECT_DIR$/weather-master/universityDemo/universityDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weather-master/weather.iml" filepath="$PROJECT_DIR$/weather-master/weather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/weather-master.iml" filepath="$PROJECT_DIR$/.idea/weather-master.iml" />
+    </modules>
+  </component>
+</project>
