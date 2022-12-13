@@ -36,4 +36,26 @@ public class SearchController {
         logger.info("fetch student information");
         return new ResponseEntity<>(studentService.fetchALlStudents(), HttpStatus.OK);
     }
+
+    @GetMapping("/search/multithread")
+    public void multithread(@RequestParam List<Integer> ages) throws Exception{
+        Thread empThread = new Thread(() ->{
+            try{
+                employeeService.fetchAllEmployeesByAges(ages);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        });
+        Thread stuThread = new Thread(() -> {
+            try {
+                studentService.fetchALlStudents();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        });
+        empThread.start();
+        stuThread.start();
+        empThread.join();
+        stuThread.join();
+    }
 }
